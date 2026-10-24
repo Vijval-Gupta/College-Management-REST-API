@@ -135,17 +135,17 @@ public class StudentService {
         List<CourseResponseDTO> result = new ArrayList<>();
 
         for (Course course : student.getCourses()) {
-            List<Long> studentIds = new ArrayList<>();
-
-            for (Student s : course.getStudents()) {
-                studentIds.add(s.getId());
-            }
+//            List<Long> studentIds = new ArrayList<>();
+//
+//            for (Student s : course.getStudents()) {
+//                studentIds.add(s.getId());
+//            }
 
             result.add(new CourseResponseDTO(
                     course.getId(),
                     course.getName(),
                     course.getCredits(),
-                    studentIds
+                    new ArrayList<>()
             ));
         }
 

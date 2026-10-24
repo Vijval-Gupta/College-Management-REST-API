@@ -92,11 +92,11 @@ public class CourseService {
                 departmentName = student.getDepartment().getName();
             }
 
-            List<Long> courseIds = new ArrayList<>();
-
-            for (Course studentCourse : student.getCourses()) {
-                courseIds.add(studentCourse.getId());
-            }
+//            List<Long> courseIds = new ArrayList<>();
+//
+//            for (Course studentCourse : student.getCourses()) {
+//                courseIds.add(studentCourse.getId());
+//            }
 
             result.add(new StudentResponseDTO(
                     student.getId(),
@@ -105,7 +105,7 @@ public class CourseService {
                     student.getEmail(),
                     departmentId,
                     departmentName,
-                    courseIds
+                    new ArrayList<>()
             ));
         }
 

@@ -90,11 +90,11 @@ public class DepartmentService {
             Long departmentId = department.getId();
             String departmentName = department.getName();
 
-            List<Long> courseIds = new ArrayList<>();
-
-            for (Course course : student.getCourses()) {
-                courseIds.add(course.getId());
-            }
+//            List<Long> courseIds = new ArrayList<>();
+//
+//            for (Course course : student.getCourses()) {
+//                courseIds.add(course.getId());
+//            }
 
             result.add(new StudentResponseDTO(
                     student.getId(),
@@ -103,7 +103,7 @@ public class DepartmentService {
                     student.getEmail(),
                     departmentId,
                     departmentName,
-                    courseIds
+                    new ArrayList<>()
             ));
         }
 
